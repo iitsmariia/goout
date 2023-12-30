@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+    <title>Date? Pretty please?</title>
+
+
+
+
+</head>
+
+<body>
+
+<img id="backgr" src="https://drive.google.com/uc?export=view&id=1K1xQKlqoAm0z-WfwFSb42eOVGwfdmaPl">
+<img id="backgr2" src="https://drive.google.com/uc?export=view&id=1lMClbQ--DzZ4-L3rUouAfjIXU7TabP3n">
+<img id="backgr3" src="https://drive.google.com/uc?export=view&id=1Di4a64CXBdcvbLHyL-2ZkyvHmCMi8s08">
+<img id="backgr4" src="https://drive.google.com/uc?export=view&id=188qBIJofzyeuKj2CqkuhBMWsF0ykpWjc">
+
+
+<button id="hi"
+onclick="handleHIClick('hi')">
+<img src="https://drive.google.com/uc?export=view&id=1mZmNduu7i2cV05laHBmfRwy7D_HuY2ZH">
+</button>
+
+<button id="what"
+onclick="handleWHATClick('what')">
+<img src="https://drive.google.com/uc?export=view&id=1edMe9VZWOy1S90j6egpsFsEv2iGpwOeB">
+</button>
+
+<button id="yes"
+onclick="handleYESClick('yes')">
+<img src="https://drive.google.com/uc?export=view&id=1vnJOBwyVvhP4Rz74Fhyn_Jyr4MPMxFEW">
+</button>
+
+<button id="no"
+onmouseover="handleNOHover('no')"
+onmouseout="handleNOHover2('no')">
+<img src="https://drive.google.com/uc?export=view&id=10UK-S2ToRmsGbDvvnuAQQbQ1L4yz5SBn">
+</button>
+
+<style>
+    .button-container {
+        position: relative;
+        width: 100%; /* Adjust width as needed */
+        height: 100vh; /* Ensure full viewport height */
+    }
+ 
+    #hi {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 10px; /* Adjust margin as needed */
+        display: block;
+    }
+ 
+    #what {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 10px; /* Adjust margin as needed */
+        display: none;
+    }
+
+    #yes {
+        position: absolute;
+        top: 60%;
+        left: 45%;
+        transform: translate(-50%, -50%);
+        margin: 10px; /* Adjust margin as needed */
+        display: none;
+    }
+
+    #no {
+        position: absolute;
+        top: 60%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        margin: 10px; /* Adjust margin as needed */
+        display: none;
+        transition: opacity 0.3s;
+        cursor:none;
+    }
+
+    #backgr2 {
+        display: none;
+    }
+
+    #backgr3 {
+        display: none;
+    }
+
+    #backgr4 {
+        display: none;
+    }
+
+button {
+    border:none;
+    padding: 0;
+    background:none;
+    cursor:pointer;
+
+    
+}
+
+</style>
+ 
+<script>
+    
+    function handleHIClick() {
+        document.getElementById('hi').style.display = "none";
+        document.getElementById('backgr2').style.display = "block";
+        document.getElementById('backgr').style.display = "none";
+        document.getElementById('what').style.display = "block";
+    }
+
+    function handleWHATClick() {
+        document.getElementById('what').style.display = "none";
+        document.getElementById('yes').style.display = "block";
+        document.getElementById('no').style.display = "block";
+        document.getElementById('backgr2').style.display = "none";
+        document.getElementById('backgr3').style.display = "block";
+    }
+
+    function handleNOHover() {
+        document.getElementById('no').style.opacity = '0';
+    }
+
+    function handleNOHover2() {
+        document.getElementById('no').style.opacity = '1';
+    }
+
+    function handleYESClick() {
+        document.getElementById('backgr3').style.display = "none";
+        document.getElementById('backgr4').style.display = "block";
+        document.getElementById('yes').style.display = "none";
+        document.getElementById('no').style.display = "none";
+    }
+
+
+</script>
+
+</body>
+</html>
